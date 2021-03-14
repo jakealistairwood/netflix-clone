@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 import MovieRow from './components/MovieRow';
 import requests from './requests';
 import './App.scss';
@@ -24,10 +25,11 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
-      <h1 className="appHeader">My Netflix Clone App</h1>
+      <Hero />
       <MovieRow title="Trending Now" fetchUrl={requests.fetchTrendingMovies} isLargeRow />
       <MovieRow title="Top Rated" fetchUrl={requests.fetchTopRatedMovies} />
       <MovieRow title="Most Viewed" fetchUrl={requests.fetchMostViewed} />
+      {/* <MovieRow title="Best Picture Winners" fetchUrl={requests.fetchBestPictures} /> */}
       <MovieRow title="Popular" fetchUrl={requests.fetchPopularMovies} />
     </div>
   );

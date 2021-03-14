@@ -16,10 +16,31 @@ const Navbar = () => {
                     <a href=""><li>My List</li></a>
                 </ul>
             </div>    
-            <div className="navbar__right">
-                <ul className="navbar__links-right">
-                    <a href=""><li></li></a>
-                </ul>
+            <div className={styles.navbar__right}>
+                <div className={styles.icon__container}>
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.81775 17.3401C14.236 17.3401 17.8177 13.7584 17.8177 9.34009C17.8177 4.92181 14.236 1.34009 9.81775 1.34009C5.39947 1.34009 1.81775 4.92181 1.81775 9.34009C1.81775 13.7584 5.39947 17.3401 9.81775 17.3401Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19.8178 19.34L15.4678 14.99" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <a href="">KIDS</a>
+                <div className={styles.icon__container}>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.8177 11.3401V21.3401H2.81775V11.3401" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20.8177 6.34009H0.817749V11.3401H20.8177V6.34009Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.8177 21.3401V6.34009" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.8177 6.34009H6.31775C5.65471 6.34009 5.01882 6.0767 4.54998 5.60785C4.08114 5.13901 3.81775 4.50313 3.81775 3.84009C3.81775 3.17705 4.08114 2.54116 4.54998 2.07232C5.01882 1.60348 5.65471 1.34009 6.31775 1.34009C9.81775 1.34009 10.8177 6.34009 10.8177 6.34009Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.8177 6.34009H15.3177C15.9808 6.34009 16.6167 6.0767 17.0855 5.60785C17.5544 5.13901 17.8177 4.50313 17.8177 3.84009C17.8177 3.17705 17.5544 2.54116 17.0855 2.07232C16.6167 1.60348 15.9808 1.34009 15.3177 1.34009C11.8177 1.34009 10.8177 6.34009 10.8177 6.34009Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div className={styles.icon__container}>
+                    <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.8177 7.34009C15.8177 5.74879 15.1856 4.22267 14.0604 3.09745C12.9352 1.97223 11.409 1.34009 9.81775 1.34009C8.22645 1.34009 6.70033 1.97223 5.57511 3.09745C4.44989 4.22267 3.81775 5.74879 3.81775 7.34009C3.81775 14.3401 0.817749 16.3401 0.817749 16.3401H18.8177C18.8177 16.3401 15.8177 14.3401 15.8177 7.34009Z" fill="white" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.5478 20.3401C11.372 20.6432 11.1196 20.8947 10.816 21.0696C10.5124 21.2445 10.1681 21.3365 9.81777 21.3365C9.46739 21.3365 9.12316 21.2445 8.81954 21.0696C8.51593 20.8947 8.26358 20.6432 8.08777 20.3401" fill="white"/>
+                        <path d="M11.5478 20.3401C11.372 20.6432 11.1196 20.8947 10.816 21.0696C10.5124 21.2445 10.1681 21.3365 9.81777 21.3365C9.46739 21.3365 9.12316 21.2445 8.81954 21.0696C8.51593 20.8947 8.26358 20.6432 8.08777 20.3401" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <img src="https://occ-0-279-299.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABVBAGh4joXctsR_a280W9q9jlJsS-ElsYcSti17ZN6LEt_aQXPqOEZRqx9EbMEDcM8aDKivOjrHFH9gH8bezuhM.png?r=435" alt="user_icon"/>
             </div>    
         </nav>
     )

@@ -17,13 +17,15 @@ const MovieRow = ({title, isLargeRow, fetchUrl}) => {
     const base_url = "https://image.tmdb.org/t/p/original";
 
     return (
-        <div className={styles.movieRow}>
-           <h2>{title}</h2> 
-           <div className={styles.movieRow__movies}>
-                {movies.map((movie) => {
-                    return <img key={movie.id} className={styles.movie__image}  src={`${base_url}${movie.poster_path}`} alt={movie.title} />    
-                })}
-           </div>
+        <div className={styles.section__container}>
+            <div className={styles.movieRow}>
+            <h2>{title}</h2> 
+            <div className={styles.movieRow__movies}>
+                    {movies.map((movie) => {
+                        return <img key={movie.id} className={styles.movie__image}  src={`${base_url}${movie.poster_path}`} alt={movie.title} />    
+                    })}
+            </div>
+            </div>
         </div>
     )
 }
