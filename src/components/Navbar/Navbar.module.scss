@@ -1,0 +1,37 @@
+@import '../../styles/main';
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    padding: 0 2.5%;
+
+    .navbar__left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .navbar__logo {
+            height: 40px;
+            width: 100px;
+
+            svg {
+                height: 40px;
+                width: 100%;
+            }
+        }
+
+        .navbar__linksLeft {
+            display: flex;
+            flex-direction: row;
+            margin-left: 50px;
+
+            a {
+                li {
+                    padding-right: 18px;
+                }
+            }
+        }
+    }
+}

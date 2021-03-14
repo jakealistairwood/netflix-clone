@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
+import Navbar from './components/Navbar';
 import MovieRow from './components/MovieRow';
 import requests from './requests';
-import './App.css';
+import './App.scss';
 
 // const fetchMovieData = () => {
 //   return axios
@@ -23,9 +23,12 @@ const App = () => {
   
   return (
     <div className="App">
-      <h1>Netflix</h1>
-      <MovieRow title="Trending Now" fetchUrl={requests.fetchTrendingMovies} />
+      <Navbar />
+      <h1 className="appHeader">My Netflix Clone App</h1>
+      <MovieRow title="Trending Now" fetchUrl={requests.fetchTrendingMovies} isLargeRow />
       <MovieRow title="Top Rated" fetchUrl={requests.fetchTopRatedMovies} />
+      <MovieRow title="Most Viewed" fetchUrl={requests.fetchMostViewed} />
+      <MovieRow title="Popular" fetchUrl={requests.fetchPopularMovies} />
     </div>
   );
 }
