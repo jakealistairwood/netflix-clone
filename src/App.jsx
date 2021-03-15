@@ -26,11 +26,13 @@ const App = () => {
     <div className="App">
       <Navbar />
       <Hero />
-      <MovieRow title="Trending Now" fetchUrl={requests.fetchTrendingMovies} isLargeRow />
-      <MovieRow title="Top Rated" fetchUrl={requests.fetchTopRatedMovies} />
-      <MovieRow title="Most Viewed" fetchUrl={requests.fetchMostViewed} />
-      {/* <MovieRow title="Best Picture Winners" fetchUrl={requests.fetchBestPictures} /> */}
-      <MovieRow title="Popular" fetchUrl={requests.fetchPopularMovies} />
+      <div className="MovieRow__container">
+        <MovieRow title="Trending Now" fetchUrl={requests.fetchTrendingMovies} />
+        <MovieRow title="Top Rated" fetchUrl={requests.fetchTopRatedMovies} />
+        <MovieRow title="Most Viewed" fetchUrl={requests.fetchMostViewed} />
+        {/* <MovieRow title="Best Picture Winners" fetchUrl={requests.fetchBestPictures} /> */}
+        <MovieRow title="Popular" fetchUrl={requests.fetchPopularMovies} />
+      </div>
     </div>
   );
 }

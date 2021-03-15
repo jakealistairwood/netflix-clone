@@ -3,7 +3,8 @@
 .hero {
     color: white;
     object-fit: contain;
-    height: 85vh;
+    height: 95vh;
+    position: relative;
 
     .hero__content {
         display: flex;

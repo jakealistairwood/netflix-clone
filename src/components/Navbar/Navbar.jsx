@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
+    const [ navbarScroll, setNavbarScroll ] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 0){
+                setNavbarScroll(true);
+            } else {
+                setNavbarScroll(false);
+            } 
+        });
+        return () => {
+            window.removeEventListener('scroll');
+        };
+    }, []);
+
     return (
+        // !navbarScroll ? "navbar" : "navbar__active"
+        // <nav className={`${!navbarScroll ? `${styles.navbar}` : `${styles.navbar__active}`}`}>
         <nav className={styles.navbar}>
             <div className={styles.navbar__left}>
                 <div className={styles.navbar__logo}>

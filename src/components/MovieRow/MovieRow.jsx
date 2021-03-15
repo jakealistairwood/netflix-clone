@@ -1,9 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import YouTube from 'react-youtube';
+import movieTrailer from 'movie-trailer';
 import axios from '../../axios';
 import styles from './MovieRow.module.scss';
 
-const MovieRow = ({title, isLargeRow, fetchUrl}) => {
+const MovieRow = ({title, fetchUrl}) => {
     const [ movies, setMovies ] = useState([]);
+    const [ trailer, setTrailer ] = useState("");
+
+    const opts = {
+        height: "400",
+        width: "100%",
+        playerVars: {
+            autoplay: 1,
+        }
+    };
 
     useEffect(() => {
         const fetchMovieData = async () => {
@@ -16,16 +27,32 @@ const MovieRow = ({title, isLargeRow, fetchUrl}) => {
 
     const base_url = "https://image.tmdb.org/t/p/original";
 
+    const handleClick = async (movie) => {
+        if(trailer){
+            setTrailer('');
+        } else {
+            let trailerURL = await axios.get(
+                `/movie/${movie.id}/videos?api_key=7cc71555b369a368b14edcf3f3229b77`
+            );
+            setTrailer(trailerURL.data.results[0]?.key);
+        }
+    }
+
     return (
-        <div className={styles.section__container}>
-            <div className={styles.movieRow}>
+        <div className={styles.movieRow}>
             <h2>{title}</h2> 
             <div className={styles.movieRow__movies}>
-                    {movies.map((movie) => {
-                        return <img key={movie.id} className={styles.movie__image}  src={`${base_url}${movie.poster_path}`} alt={movie.title} />    
-                    })}
+                {movies.map((movie) => {
+                    return <img 
+                        key={movie.id} 
+                        onClick={() => handleClick(movie)}
+                        className={styles.movie__image}  
+                        src={`${base_url}${movie.poster_path}`} 
+                        alt={movie.title} 
+                    />    
+                })}
             </div>
-            </div>
+            {trailer && <YouTube videoId={trailer} opts={opts} />}
         </div>
     )
 }

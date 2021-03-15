@@ -23,7 +23,7 @@ const Hero = () => {
         <header className={styles.hero} style={{
             backgroundSize: "cover",
             backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
-            backgroundPosition: "center center"
+            backgroundPosition: "center center",
         }}>
             <div className={styles.hero__content}>
                 <h1 className={styles.hero__movie}>

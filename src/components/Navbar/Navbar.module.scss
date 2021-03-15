@@ -1,5 +1,9 @@
 @import '../../styles/main';
 
+.navbar.active {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 1));
+}
+
 .navbar {
     display: flex;
     position: fixed;
