@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import YouTube from 'react-youtube';
-import movieTrailer from 'movie-trailer';
 import axios from '../../axios';
 import styles from './MovieRow.module.scss';
 
@@ -9,7 +8,7 @@ const MovieRow = ({title, fetchUrl}) => {
     const [ trailer, setTrailer ] = useState("");
 
     const opts = {
-        height: "400",
+        height: "1000",
         width: "100%",
         playerVars: {
             autoplay: 1,
@@ -40,6 +39,7 @@ const MovieRow = ({title, fetchUrl}) => {
 
     return (
         <div className={styles.movieRow}>
+            {trailer && <YouTube videoId={trailer} opts={opts} />}
             <h2>{title}</h2> 
             <div className={styles.movieRow__movies}>
                 {movies.map((movie) => {
@@ -52,7 +52,6 @@ const MovieRow = ({title, fetchUrl}) => {
                     />    
                 })}
             </div>
-            {trailer && <YouTube videoId={trailer} opts={opts} />}
         </div>
     )
 }

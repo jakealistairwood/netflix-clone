@@ -28,6 +28,7 @@ const App = () => {
       <Hero />
       <div className="MovieRow__container">
         <MovieRow title="Trending Now" fetchUrl={requests.fetchTrendingMovies} />
+        <MovieRow title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} />
         <MovieRow title="Top Rated" fetchUrl={requests.fetchTopRatedMovies} />
         <MovieRow title="Most Viewed" fetchUrl={requests.fetchMostViewed} />
         {/* <MovieRow title="Best Picture Winners" fetchUrl={requests.fetchBestPictures} /> */}
