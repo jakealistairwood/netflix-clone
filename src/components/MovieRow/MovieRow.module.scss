@@ -10,6 +10,10 @@ h2 {
     width: 95%;
     margin: 50px auto;
 }
+
+.movieRow__movies::-webkit-scrollbar {
+    display: none;
+}
     
 .movieRow__movies {
     display: flex;
@@ -17,9 +21,9 @@ h2 {
     overflow-y: hidden;
     overflow-x: scroll;
     
-    .movie__image::-webkit-scrollbar {
-        display: none;
-    }
+    // .movie__image::-webkit-scrollbar {
+    //     display: none;
+    // }
     
     .movie__image {
         object-fit: contain; /* Keeps the ratio */
