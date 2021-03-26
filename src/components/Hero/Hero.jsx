@@ -32,7 +32,8 @@ const Hero = () => {
                     {/* {movie?.title || movie?.name || movie?.original_name} */}
                     The Tales of Lord Fauntleroy
                 </h1>
-                <h3 className={styles.hero__desc}>{movie?.overview}</h3>
+                {/* <h3 className={styles.hero__desc}>{movie?.overview}</h3> */}
+                <h3 className={styles.hero__desc}>A documentary following the life and tales of Lord Fauntleroy.</h3>
                 <div className={styles.hero__btns}>
                     <button className={styles.play__btn}>
                         <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
