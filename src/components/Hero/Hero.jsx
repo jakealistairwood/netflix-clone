@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './Hero.module.scss';
 import axios from '../../axios';
 import requests from '../../requests';
+import img from '../../img/alex.jpg';
 
 const Hero = () => {
     const [ movie, setMovie ] = useState([]);
@@ -22,12 +23,14 @@ const Hero = () => {
     return (
         <header className={styles.hero} style={{
             backgroundSize: "cover",
-            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+            // backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+            backgroundImage: `url(${img})`,
             backgroundPosition: "center center",
         }}>
             <div className={styles.hero__content}>
                 <h1 className={styles.hero__movie}>
-                    {movie?.title || movie?.name || movie?.original_name}
+                    {/* {movie?.title || movie?.name || movie?.original_name} */}
+                    The Tales of Lord Fauntleroy
                 </h1>
                 <h3 className={styles.hero__desc}>{movie?.overview}</h3>
                 <div className={styles.hero__btns}>
