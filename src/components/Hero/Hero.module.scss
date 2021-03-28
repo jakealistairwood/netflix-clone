@@ -13,16 +13,52 @@
         margin-left: 2.5%;
         height: 100%;
         width: 40%;
+        /* To remove */
+
+        .svg__container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .netflixSVG {
+                width: 30px;
+                // background-color: red;
+
+                @media screen and (max-width: 1440px) {
+                    width: 20px;
+                }
+            }
+
+            .netflixOriginal {
+                width: 500px;
+                padding-left: 20px;
+
+                @media screen and (max-width: 1440px) {
+                    width: 350px;
+                }
+            }
+        }
 
         .hero__movie {
             font-size: 3rem;
             font-weight: 800;
             margin-bottom: 30px;
+
+            @media screen and (max-width: 1440px) {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
         }
 
         .hero__desc {
             font-size: 1.4rem;
             line-height: 35px;
+
+            @media screen and (max-width: 1440px) {
+                font-size: 1rem;
+                line-height: 30px;
+            }
         }
 
         .hero__btns {

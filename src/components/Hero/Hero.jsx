@@ -3,6 +3,8 @@ import styles from './Hero.module.scss';
 import axios from '../../axios';
 import requests from '../../requests';
 import img from '../../img/alex.jpg';
+import NetflixImage from '../../img/netflix.svg';
+import NetflixOriginal from '../../img/netflix_original.svg';
 
 const Hero = () => {
     const [ movie, setMovie ] = useState([]);
@@ -28,12 +30,16 @@ const Hero = () => {
             backgroundPosition: "center center",
         }}>
             <div className={styles.hero__content}>
+                <div className={styles.svg__container}>
+                    <img className={styles.netflixSVG} src={NetflixImage} alt=""/>
+                    <img className={styles.netflixOriginal} src={NetflixOriginal} alt=""/>
+                </div>
                 <h1 className={styles.hero__movie}>
                     {/* {movie?.title || movie?.name || movie?.original_name} */}
-                    The Tales of Lord Fauntleroy
+                    The Tales and Tribulations of Lord Fauntleroy
                 </h1>
                 {/* <h3 className={styles.hero__desc}>{movie?.overview}</h3> */}
-                <h3 className={styles.hero__desc}>A documentary following the life and tales of Lord Fauntleroy.</h3>
+                <h3 className={styles.hero__desc}>A Netflix Original documentary gaining an insight into the life of Lord Fauntleroy as he approaches 30, from those that know him best.</h3>
                 <div className={styles.hero__btns}>
                     <button className={styles.play__btn}>
                         <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
