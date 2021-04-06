@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import styles from './Hero.module.scss';
 import axios from '../../axios';
 import requests from '../../requests';
-import img from '../../img/alex.jpg';
 import NetflixImage from '../../img/netflix.svg';
 import NetflixOriginal from '../../img/netflix_original.svg';
 
@@ -25,8 +24,7 @@ const Hero = () => {
     return (
         <header className={styles.hero} style={{
             backgroundSize: "cover",
-            // backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
-            backgroundImage: `url(${img})`,
+            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
             backgroundPosition: "center center",
         }}>
             <div className={styles.hero__content}>
@@ -35,11 +33,9 @@ const Hero = () => {
                     <img className={styles.netflixOriginal} src={NetflixOriginal} alt=""/>
                 </div>
                 <h1 className={styles.hero__movie}>
-                    {/* {movie?.title || movie?.name || movie?.original_name} */}
-                    The Tales and Tribulations of Lord Fauntleroy
+                    {movie?.title || movie?.name || movie?.original_name}
                 </h1>
-                {/* <h3 className={styles.hero__desc}>{movie?.overview}</h3> */}
-                <h3 className={styles.hero__desc}>A Netflix Original documentary gaining an insight into the life of Lord Fauntleroy as he approaches 30, from those that know him best.</h3>
+                <h3 className={styles.hero__desc}>{movie?.overview}</h3>
                 <div className={styles.hero__btns}>
                     <button className={styles.play__btn}>
                         <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
